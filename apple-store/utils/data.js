@@ -4,7 +4,7 @@ const data = {
             name: 'Macbook',
             desc: 'The MacBook is a line of Mac laptops sold by Apple Inc. between May 2006 and February 2012. It replaced the iBook series of notebooks as a part of Apple transition from PowerPC to Intel processors.Positioned as the low end of the MacBook family, below the premium ultra- portable MacBook Air and the performance - oriented MacBook Pro the MacBook was aimed at the consumer and education markets.It became the best - selling Mac in Apple history. For five months in 2008, it was the best-selling laptop of any brand in US retail stores',
             category: "laptop",
-            price: 89000,
+            price: 89000, 
             image: "/public/images/laptop.jpg",
             featured: true
         },
