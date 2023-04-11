@@ -12,7 +12,7 @@ const Navbar = () => {
   // const {user} = useAuthContext()
 
   return (
-    <div className='bg-gray-800 text-[white] h-[60px] w-full py-2 px-6 flex justify-center'>
+    <div className='bg-gradient-to-r from-cyan-500 to-pink-500 text-[white] h-[60px] w-full py-2 px-6 flex justify-center'>
       <div className='h-full w-10/12 my-auto flex justify-between items-center'>
         {/* left */}
         <h2 className='text-3xl'>

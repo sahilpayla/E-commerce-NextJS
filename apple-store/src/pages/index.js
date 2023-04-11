@@ -11,7 +11,7 @@ import Footer from '../../components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({featuredProducts}) {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Categories />
-        <FeaturedProducts/>
+        <FeaturedProducts products={featuredProducts}/>
         <Footer />
       </>
     </>

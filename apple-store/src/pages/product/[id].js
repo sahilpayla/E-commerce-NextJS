@@ -7,7 +7,7 @@ import { useCartContext } from '../../../ctx/cartContext'
 
 const ProductDetails = ({ product }) => {
     const [quantity, setQuantity] = useState(1)
-    const { addToCart } = useCartContext()
+    // const { addToCart } = useCartContext()
 
     const addQuantity = (command) => {
         setQuantity(prev => {
