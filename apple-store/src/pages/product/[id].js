@@ -7,7 +7,7 @@ import { useCartContext } from '../../../ctx/cartContext'
 
 const ProductDetails = ({ product }) => {
     const [quantity, setQuantity] = useState(1)
-    // const { addToCart } = useCartContext()
+    const { addToCart } = useCartContext()
 
     const addQuantity = (command) => {
         setQuantity(prev => {
@@ -33,16 +33,21 @@ const ProductDetails = ({ product }) => {
                         </div>
                         {/* right */}
                         <div className='flex-1 flex flex-col gap-8'>
-                            <h2 className='text-[20px] text-[#333]'>Name of Product: <span className='text-orange-500 ml-2'>{product?.name}</span></h2>
-                            <span className='text-[20px] flex items-center gap-4'>Category: <span className='px-4 py-2 text-[#efefef] text-[16px] bg-orange-500 rounded-xl'>{product?.category}</span></span>
-                            <p className='text-[20px] text-[#333]'>Description: <span className='text-orange-500 ml-2 text-ellipsis'>{product?.desc}</span></p>
+                            <h2 className='text-[35px] text-[#333]'>
+                                <span className='text-gray-800 font-bold ml-2'>{product?.name}</span>
+                            </h2>
+                            <span className='text-[20px] flex items-center gap-4'>Category: <span className='px-4 py-2 text-[white] text-[16px] bg-blue-500 rounded-xl'>{product?.category}</span></span>
+
                             <div className='flex gap-6 items-center'>
                                 <span onClick={() => addQuantity('dec')} className='bg-slate-300 px-4 py-2 text-[18px]'>-</span>
                                 <span>{quantity}</span>
                                 <span onClick={() => addQuantity('inc')} className='bg-slate-300 px-4 py-2 text-[18px]'>+</span>
                             </div>
-                            <span className="text-[20px] text-[#333]">Price: <span className='text-orange-500 ml-2'>${product?.price}</span></span>
-                            <button onClick={() => addToCart({...product, quantity})} className="mt-auto py-2 px-5 rounded-lg flex items-center gap-4 bg-orange-400 text-[#efefef] max-w-max hover:bg-orange-500 tranistion-all">Add to Cart <AiFillShopping /></button>
+                            <span className="text-[20px] text-[#333]">Price: <span className='text-[#0c550c] font-bold ml-2'>₹ {product?.price}</span></span>
+                            <button onClick={() => addToCart({ ...product, quantity })} className="mt-auto py-2 px-5 rounded-lg flex items-center gap-4 bg-gradient-to-r from-lime-500 to-green-500 text-[#efefef] max-w-max hover:bg-gray-600 tranistion-all">Add to Cart <AiFillShopping /></button>
+
+                            <p className='text-[20px] text-[#333]'>Description: <span className='text-orange-500 ml-2 text-ellipsis'>{product?.desc}</span></p>
+
                         </div>
                     </div>
                 </div>

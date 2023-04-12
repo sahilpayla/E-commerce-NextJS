@@ -6,8 +6,8 @@ import { useCartContext } from '../ctx/cartContext'
 import Cart from './Cart'
 
 const Navbar = () => {
-  // const { isCartOpen, toggleCart, cartItems } = useCartContext()
-  // const {user} = useAuthContext()
+  const { isCartOpen, toggleCart, cartItems } = useCartContext()
+  const { user } = useAuthContext()
 
   return (
     <div className='bg-gradient-to-r from-cyan-500 to-pink-500 text-[white] h-[60px] w-full py-2 px-6 flex justify-center'>
@@ -30,19 +30,19 @@ const Navbar = () => {
             <input className='text-[#222] outline-none' type="text" placeholder='Search...' />
             <AiOutlineSearch color="black" />
           </div> */}
+
           <div className='relative'>
-            <AiOutlineShoppingCart size={25} />
+            <AiOutlineShoppingCart size={25} onClick={toggleCart} />
             <span className='absolute -top-3 -right-4 px-2 rounded-full bg-white text-[#222]'>
-              {/* {cartItems?.length} */}
-              5
+              {cartItems?.length}
             </span>
             <div className="absolute top-4 -right-16 z-10">
-              {/* {isCartOpen && <Cart />} */}
-              cartopen
+              {isCartOpen && <Cart />}
             </div>
           </div>
           <span>
-            username
+            {user ? (user?.username) : 
+            (<Link href='/login'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Login</li></Link>)}
           </span>
         </div>
       </div>
