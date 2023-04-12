@@ -6,7 +6,7 @@ import { useCartContext } from '../ctx/cartContext'
 import Cart from './Cart'
 
 const Navbar = () => {
-  // const { isCartOpen, toggleCart, cartItems } = useCartContext()
+  const { isCartOpen, toggleCart, cartItems } = useCartContext()
   // const {user} = useAuthContext()
 
   return (
@@ -26,19 +26,17 @@ const Navbar = () => {
         </ul>
         {/* right */}
         <div className='flex items-center gap-6'>
-          {/* <div className='flex items-center gap-4 bg-white px-2 py-1 rounded-lg'>
+          <div className='flex items-center gap-4 bg-white px-2 py-1 rounded-lg'>
             <input className='text-[#222] outline-none' type="text" placeholder='Search...' />
             <AiOutlineSearch color="black" />
-          </div> */}
+          </div>
           <div className='relative'>
-            <AiOutlineShoppingCart size={25} />
+            <AiOutlineShoppingCart size={25} onClick={toggleCart} />
             <span className='absolute -top-3 -right-4 px-2 rounded-full bg-white text-[#222]'>
-              {/* {cartItems?.length} */}
-              5
+              {cartItems?.length}
             </span>
             <div className="absolute top-4 -right-16 z-10">
-              {/* {isCartOpen && <Cart />} */}
-              cartopen
+              {isCartOpen && <Cart />}
             </div>
           </div>
           <span>
