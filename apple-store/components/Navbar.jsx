@@ -30,7 +30,7 @@ const Navbar = () => {
             <input className='text-[#222] outline-none' type="text" placeholder='Search...' />
             <AiOutlineSearch color="black" />
           </div> */}
-          <Link href='/login'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Login</li></Link>
+
           <div className='relative'>
             <AiOutlineShoppingCart size={25} onClick={toggleCart} />
             <span className='absolute -top-3 -right-4 px-2 rounded-full bg-white text-[#222]'>
@@ -41,7 +41,8 @@ const Navbar = () => {
             </div>
           </div>
           <span>
-            {user?.username}
+            {user ? (user?.username) : 
+            (<Link href='/login'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Login</li></Link>)}
           </span>
         </div>
       </div>
