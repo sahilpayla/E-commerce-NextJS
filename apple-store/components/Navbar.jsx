@@ -7,7 +7,7 @@ import Cart from './Cart'
 
 const Navbar = () => {
   const { isCartOpen, toggleCart, cartItems } = useCartContext()
-  const {user} = useAuthContext()
+  const { user } = useAuthContext()
 
   return (
     <div className='bg-gradient-to-r from-cyan-500 to-pink-500 text-[white] h-[60px] w-full py-2 px-6 flex justify-center'>
@@ -26,10 +26,11 @@ const Navbar = () => {
         </ul>
         {/* right */}
         <div className='flex items-center gap-6'>
-          <div className='flex items-center gap-4 bg-white px-2 py-1 rounded-lg'>
+          {/* <div className='flex items-center gap-4 bg-white px-2 py-1 rounded-lg'>
             <input className='text-[#222] outline-none' type="text" placeholder='Search...' />
             <AiOutlineSearch color="black" />
-          </div>
+          </div> */}
+          <Link href='/login'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Login</li></Link>
           <div className='relative'>
             <AiOutlineShoppingCart size={25} onClick={toggleCart} />
             <span className='absolute -top-3 -right-4 px-2 rounded-full bg-white text-[#222]'>

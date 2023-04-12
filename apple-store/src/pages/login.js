@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { useAuthContext } from '../../ctx/authContext'
+import Link from 'next/link';
 
 const Login = () => {
     const [data, setData] = useState({})
-    const handleLogin = useAuthContext()
+    const {handleLogin} = useAuthContext()
 
     const handleChange = (e) => {
         setData(prev => {
@@ -31,8 +32,14 @@ const Login = () => {
                         placeholder='Password...'
                     />
                     <button className="bg-white text-[black] hover:bg-[orange] px-6 py-2 rounded-xl mt-4">
-                        Submit
+                        Login
                     </button>
+
+                    <Link href='/register'>
+                        <li className="bg-white text-[black] hover:bg-[orange] px-6 py-2 rounded-xl">
+                            Register
+                        </li>
+                    </Link>
                 </form>
             </div>
         </div>
