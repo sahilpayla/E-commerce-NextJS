@@ -16,6 +16,7 @@ export default function Home({featuredProducts}) {
     <>
       <Head>
         <title>Apple Store</title>
+        <link rel="shortcut icon" href="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png" />
       </Head>
       <>
         <Navbar />
