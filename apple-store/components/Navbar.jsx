@@ -4,8 +4,6 @@ import { AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai'
 import { useAuthContext } from '../ctx/authContext'
 import { useCartContext } from '../ctx/cartContext'
 import Cart from './Cart'
-// import '../src/pages/_app'
-// import './navbar.module.css';
 
 const Navbar = () => {
   // const { isCartOpen, toggleCart, cartItems } = useCartContext()
@@ -20,11 +18,11 @@ const Navbar = () => {
         </h2>
         {/* center */}
         <ul className='flex justify-center items-center gap-6 text-[#efefef] text-[18px]'>
-          <li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Home</li>
-          <li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Hero</li>
-          <li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Categories</li>
-          <li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Featured</li>
-          <li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Contacts</li>
+          <Link href='/'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Home</li></Link>
+          <Link href='/'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Hero</li></Link>
+          <Link href='/'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Categories</li></Link>
+          <Link href='/'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Featured</li></Link>
+          <Link href='/'><li className='cursor-pointer transition-all hover:text-[#efefefe6]'>Contacts</li></Link>
         </ul>
         {/* right */}
         <div className='flex items-center gap-6'>
@@ -33,7 +31,7 @@ const Navbar = () => {
             <AiOutlineSearch color="black" />
           </div> */}
           <div className='relative'>
-            <AiOutlineShoppingCart size={25}  />
+            <AiOutlineShoppingCart size={25} />
             <span className='absolute -top-3 -right-4 px-2 rounded-full bg-white text-[#222]'>
               {/* {cartItems?.length} */}
               5
