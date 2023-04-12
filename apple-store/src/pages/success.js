@@ -1,7 +1,7 @@
 import React from 'react'
 import { FcApproval } from "react-icons/fc";
 
-const success = () => {
+const Success = () => {
   return (
     <>
       <div className=" flex justify-center items-center flex-col w-full h-screen font-bold text-3xl text-[black]">
@@ -17,4 +17,4 @@ const success = () => {
   )
 }
 
-export default success
+export default Success
